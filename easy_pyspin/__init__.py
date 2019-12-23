@@ -265,6 +265,23 @@ class Camera:
 
 
     def get_info(self, name):
+        '''Gen information on a camera node (attribute or method).
+
+        Parameters
+        ----------
+        name : string
+            The name of the desired node
+
+        Returns
+        -------
+        info : dict
+            A dictionary of retrieved properties.  *Possible* keys include:
+                - `'access'`: read/write access of node.
+                - `'description'`: description of node.
+                - `'value'`: the current value.
+                - `'unit'`: the unit of the value (as a string).
+                - `'min'` and `'max'`: the min/max value.
+        '''
         info = {'name': name}
 
         if name in self.camera_attributes:
@@ -311,6 +328,7 @@ class Camera:
         lines.append('=' * len(lines[-1]))
         lines.append('')
         lines.append('*Version: %s*' % getattr(self, 'DeviceVersion', '?'))
+        lines.append('')
 
         lines.append('Attributes')
         lines.append('-' * len(lines[-1]))

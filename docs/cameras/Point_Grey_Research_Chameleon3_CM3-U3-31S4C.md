@@ -2,6 +2,7 @@ Point Grey Research Chameleon3 CM3-U3-31S4C
 ===========================================
 
 *Version: FW:v1.10.3.00 FPGA:v2.02*
+
 Attributes
 ----------
 
@@ -151,7 +152,7 @@ Attributes
   - default range: 1 - 2
 
 `BinningHorizontalLocked` : `int`  
-  
+
   - default access: read/write
   - default value: `1`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -170,7 +171,7 @@ Attributes
   - default range: 0.0 - 12.4755859375
 
 `CamRegBaseAddress` : `int`  
-  
+
   - default access: read/write
   - default value: `281474724003840`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -275,7 +276,7 @@ Attributes
   - default range: 0 - 4294967295
 
 `DataFlashBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4043309056`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -299,7 +300,7 @@ Attributes
   - default range: 1 - 2
 
 `DecimationHorizontalLocked` : `int`  
-  
+
   - default access: read/write
   - default value: `1`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -519,13 +520,13 @@ Attributes
   - default value: `True`
 
 `Fmt7RegBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `281474724006400`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `GPIOCtrlPinRegBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `281474724008208`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -597,19 +598,19 @@ Attributes
   - default range: 0 - 511
 
 `LUTRegBankBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4042785792`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `LUTRegBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4042784768`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `LUTRegChannelBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4042785792`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -709,7 +710,7 @@ Attributes
   - possible values: `'BayerRG'`, `'BayerGB'`, `'BayerGR'`, `'BayerBG'`, `'None'`
 
 `PixelDefectCoordinateRegAddress` : `int`  
-  
+
   - default access: read only
   - default value: `281474724007424`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -773,7 +774,7 @@ Attributes
   - default value: `False`
 
 `SBRMOffset` : `int`  
-  
+
   - default access: read/write
   - default value: `2097152`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -851,25 +852,25 @@ Attributes
   - default range: 0.0 - 65535.0
 
 `StrobeLineCnt16Address` : `int`  
-  
+
   - default access: read only
   - default value: `4042266368`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `StrobeLineCntCtrlAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4042266112`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `StrobeRegBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `4042265344`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `TLParamsLocked` : `int`  
-  
+
   - default access: read/write
   - default value: `0`
   - default range: 0 - 1
@@ -1101,7 +1102,7 @@ Attributes
   - default value: `True`
 
 `UserOutputPinRegBaseAddress` : `int`  
-  
+
   - default access: read only
   - default value: `281474724008224`
   - default range: -9223372036854775808 - 9223372036854775807

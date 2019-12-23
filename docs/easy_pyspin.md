@@ -111,7 +111,22 @@ Classes
         img : PySpin Image
 
     `get_info(self, name)`
-    :
+    :   Gen information on a camera node (attribute or method).
+        
+        Parameters
+        ----------
+        name : string
+            The name of the desired node
+        
+        Returns
+        -------
+        info : dict
+            A dictionary of retrieved properties.  *Possible* keys include:
+                - `'access'`: read/write access of node.
+                - `'description'`: description of node.
+                - `'value'`: the current value.
+                - `'unit'`: the unit of the value (as a string).
+                - `'min'` and `'max'`: the min/max value.
 
     `init(self)`
     :   Initializes the camera.  Automatically called if the camera is opened
