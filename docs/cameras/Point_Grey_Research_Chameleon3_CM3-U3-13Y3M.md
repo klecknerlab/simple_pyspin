@@ -150,7 +150,7 @@ Attributes
   - default range: 1 - 2
 
 `BinningHorizontalLocked` : `int`  
-
+  
   - default access: read/write
   - default value: `1`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -169,7 +169,7 @@ Attributes
   - default range: 0.0 - 24.90234375
 
 `CamRegBaseAddress` : `int`  
-
+  
   - default access: read/write
   - default value: `281474724003840`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -274,7 +274,7 @@ Attributes
   - default range: 0 - 4294967295
 
 `DataFlashBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4043309056`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -292,7 +292,7 @@ Attributes
   - default range: -9223372036854775808 - 9223372036854775807
 
 `DecimationHorizontalLocked` : `int`  
-
+  
   - default access: read/write
   - default value: `1`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -360,7 +360,7 @@ Attributes
 `DeviceTemperature` : `float`  
   Device temperature in degrees Celcius (C).
   - default access: read only
-  - default value: `22.05000000000001`
+  - default value: `41.85000000000002`
   - unit: °C
   - default range: -1.7976931348623157e+308 - 1.7976931348623157e+308
 
@@ -506,13 +506,13 @@ Attributes
   - default value: `True`
 
 `Fmt7RegBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `281474724006400`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `GPIOCtrlPinRegBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `281474724008208`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -577,19 +577,19 @@ Attributes
   - default range: 0 - 511
 
 `LUTRegBankBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4042785792`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `LUTRegBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4042784768`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `LUTRegChannelBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4042785792`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -694,7 +694,7 @@ Attributes
   - possible values: `'BayerRG'`, `'BayerGB'`, `'BayerGR'`, `'BayerBG'`, `'None'`
 
 `PixelDefectCoordinateRegAddress` : `int`  
-
+  
   - default access: read only
   - default value: `281474724007424`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -758,7 +758,7 @@ Attributes
   - default value: `False`
 
 `SBRMOffset` : `int`  
-
+  
   - default access: read/write
   - default value: `2097152`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -824,25 +824,25 @@ Attributes
   - default range: 0.0 - 65535.0
 
 `StrobeLineCnt16Address` : `int`  
-
+  
   - default access: read only
   - default value: `4042266368`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `StrobeLineCntCtrlAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4042266112`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `StrobeRegBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `4042265344`
   - default range: -9223372036854775808 - 9223372036854775807
 
 `TLParamsLocked` : `int`  
-
+  
   - default access: read/write
   - default value: `0`
   - default range: 0 - 1
@@ -1067,7 +1067,7 @@ Attributes
   - default value: `True`
 
 `UserOutputPinRegBaseAddress` : `int`  
-
+  
   - default access: read only
   - default value: `281474724008224`
   - default range: -9223372036854775808 - 9223372036854775807
@@ -1221,46 +1221,47 @@ Commands
 --------
 
 **Note: the camera recording should be started/stopped using the `start` and `stop` methods, not any of the functions below (see easy_pyspin documentation).**
-**AcquisitionStart()**:  
+
+`AcquisitionStart()`:  
   Starts the Acquisition of the device.
   - default access: write only
 
-**AcquisitionStop()**:  
+`AcquisitionStop()`:  
   Stops the acquisition of the device at the end of the current frame.
   - default access: write only
 
-**ActivePageSave()**:  
+`ActivePageSave()`:  
   Save the data in the active page to the data flash.
   - default access: write only
 
-**DeviceReset()**:  
+`DeviceReset()`:  
   This is a command that immediately resets and reboots the device.
   - default access: write only
 
-**TimestampLatch()**:  
+`TimestampLatch()`:  
   Latches the curretn device time into the timstamp register.
   - default access: write only
 
-**TransmitFailureCountReset()**:  
+`TransmitFailureCountReset()`:  
   Reset the transmit failure count.
   - default access: write only
 
-**TriggerEventTest()**:  
+`TriggerEventTest()`:  
   This command sends a test event.
   - default access: write only
 
-**TriggerSoftware()**:  
+`TriggerSoftware()`:  
   Generates an internal trigger if Trigger Source is set to Software.
   - default access: not available
 
-**UserSetLoad()**:  
+`UserSetLoad()`:  
   Loads the User Set specified by UserSetSelector to the device and makes it active.
   - default access: write only
 
-**UserSetSave()**:  
+`UserSetSave()`:  
   Save the User Set specified by UserSetSelector to the non-volatile memory of the device.
   - default access: not available
 
-**pgrCurrentCorrectedPixelSave()**:  
+`pgrCurrentCorrectedPixelSave()`:  
   Save the Current Corrected Pixels to the non-volatile memory of the device.
   - default access: write only

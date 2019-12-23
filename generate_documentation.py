@@ -15,17 +15,19 @@ for cam in glob.glob(os.path.join(cam_dir, '*.md')):
 
 with open(os.path.join('docs', 'index.md'), 'wt') as f:
     f.write('''
-# easy_pyspin Documentation
+This page contains the documentation for the `easy_pyspin` Python library.
+It is probably easiest to learn by example ([see below](# An instructive example)), and by consulting the attributes for your specific camera.
 
-[Documentation of the python module can be found here.](easy_pyspin.md)
+  - [Documentation of the python module can be found here.](easy_pyspin.md)
+  - [Github Repository](https://github.com/klecknerlab/easy_pyspin)
 
-## Documented Cameras
+## Documented cameras
 
 {}
 
 *If you have cameras you would like to add to this list, run `document_connect_camera.py` from the source code and send the resulting output in `docs/cameras` to `dkleckner@ucmerced.edu`.*
 
-## A useful example
+## An instructive example
 ```
 # manual_setup.py
 

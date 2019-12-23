@@ -367,13 +367,14 @@ class Camera:
         lines.append('-' * len(lines[-1]))
         lines.append('')
         lines.append('**Note: the camera recording should be started/stopped using the `start` and `stop` methods, not any of the functions below (see easy_pyspin documentation).**')
+        lines.append('')
 
         for attr in sorted(self.camera_methods.keys()):
             if '_' in attr:
                 continue
             # print(attr)
             info = self.get_info(attr)
-            lines.append('**%s()**:  ' % (attr))
+            lines.append('`%s()`:  ' % (attr))
             lines.append('  ' + info.get('description', '(no description provided)'))
             lines.append('  - default access: %s' % info.get('access', '?'))
             lines.append('')
