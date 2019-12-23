@@ -1,53 +1,31 @@
-# easy_pyspin
-A Pythonic class-based wrapper for the FLIR PySpin Library.
+import pdoc
+import os
+import glob
 
-# Why?
-Why does this even exist, as the PySpin module already exists?  Because it's a pain to use, and difficult to wrap your head around basic operations.  For example, on some camera manually setting frame rate requires accessing methods by finding nodes, which is quite complicated.  This library makes it incredibly simple, and can also auto-document all the features of your *specific* cameras for easy reference.  
+context = pdoc.Context()
+module = pdoc.Module('easy_pyspin', context=context)
 
-# Installation
-1. If you don't already have them, I would recommend installing Numpy and the Python Imaging Library.  The easiest way to do this is to install a scientific Python distribution like [Anaconda](https://www.anaconda.com/distribution/).
-2. [Install Spinnaker and PySpin from FLIR.](https://www.flir.com/products/spinnaker-sdk/)  
-    - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/,))
-3. Install easy_pyspin module:
-    1. Download source from GitHub
-    2. Run `python setup.py install` or `python setup.py develop` from the directory of the downloaded files.
+with open(os.path.join('docs', 'easy_pyspin.md'), 'wt') as f:
+    f.write(module.text())
 
-# Usage
-See the examples directory of the source for these examples and more.
+cam_dir = os.path.join('docs', 'cameras')
+cam_list = []
+for cam in glob.glob(os.path.join(cam_dir, '*.md')):
+    cam_list.append(os.path.split(cam)[-1])
 
-## Basic Usage
-```
-# dead_simple.py
+with open(os.path.join('docs', 'index.md'), 'wt') as f:
+    f.write('''
+# easy_pyspin Documentation
 
-from easy_pyspin import Camera
+[Documentation of the python module can be found here.](easy_pyspin.md)
 
-with Camera() as cam: # Acquire and initialize Camera
-    cam.start() # Start recording
-    imgs = [cam.get_array() for n in range(10)] # Get 10 frames
-    cam.stop() # Stop recording
+## Documented Cameras
 
-print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
-```
-Note that as long as you open the camera using a `with` clause, you don't need to worry about initialization or cleanup of the camera -- the module handles this for you!
+{}
 
-Equivalently, you can do this manually; the following code is equivalent to the above:
-```
-from easy_pyspin import Camera
+*If you have cameras you would like to add to this list, run `document_connect_camera.py` from the source code and send the resulting output in `docs/cameras` to `dkleckner@ucmerced.edu`.*
 
-cam = Camera() # Acquire Camera
-cam.init() # Initialize camera
-
-cam.start() # Start recording
-imgs = [cam.get_array() for n in range(10)] # Get 10 frames
-cam.stop() # Stop recording
-
-cam.close() # You should explicitly clean up
-
-print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
-```
-
-## Changing Camera Settings
-Here is a more complicated example, which manual changes a number of settings, and saves a number of images using PIL.
+## A useful example
 ```
 # manual_setup.py
 
@@ -120,3 +98,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+'''.format('\n'.join('  - [%s](cameras/%s)' % (os.path.splitext(cam)[0].replace('_', ' '), cam) for cam in cam_list)))

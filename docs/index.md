@@ -1,53 +1,16 @@
-# easy_pyspin
-A Pythonic class-based wrapper for the FLIR PySpin Library.
 
-# Why?
-Why does this even exist, as the PySpin module already exists?  Because it's a pain to use, and difficult to wrap your head around basic operations.  For example, on some camera manually setting frame rate requires accessing methods by finding nodes, which is quite complicated.  This library makes it incredibly simple, and can also auto-document all the features of your *specific* cameras for easy reference.  
+# easy_pyspin Documentation
 
-# Installation
-1. If you don't already have them, I would recommend installing Numpy and the Python Imaging Library.  The easiest way to do this is to install a scientific Python distribution like [Anaconda](https://www.anaconda.com/distribution/).
-2. [Install Spinnaker and PySpin from FLIR.](https://www.flir.com/products/spinnaker-sdk/)  
-    - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/,))
-3. Install easy_pyspin module:
-    1. Download source from GitHub
-    2. Run `python setup.py install` or `python setup.py develop` from the directory of the downloaded files.
+[Documentation of the python module can be found here.](easy_pyspin.md)
 
-# Usage
-See the examples directory of the source for these examples and more.
+## Documented Cameras
 
-## Basic Usage
-```
-# dead_simple.py
+  - [Point Grey Research Chameleon3 CM3-U3-13Y3M](cameras/Point_Grey_Research_Chameleon3_CM3-U3-13Y3M.md)
+  - [Point Grey Research Chameleon3 CM3-U3-31S4C](cameras/Point_Grey_Research_Chameleon3_CM3-U3-31S4C.md)
 
-from easy_pyspin import Camera
+*If you have cameras you would like to add to this list, run `document_connect_camera.py` from the source code and send the resulting output in `docs/cameras` to `dkleckner@ucmerced.edu`.*
 
-with Camera() as cam: # Acquire and initialize Camera
-    cam.start() # Start recording
-    imgs = [cam.get_array() for n in range(10)] # Get 10 frames
-    cam.stop() # Stop recording
-
-print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
-```
-Note that as long as you open the camera using a `with` clause, you don't need to worry about initialization or cleanup of the camera -- the module handles this for you!
-
-Equivalently, you can do this manually; the following code is equivalent to the above:
-```
-from easy_pyspin import Camera
-
-cam = Camera() # Acquire Camera
-cam.init() # Initialize camera
-
-cam.start() # Start recording
-imgs = [cam.get_array() for n in range(10)] # Get 10 frames
-cam.stop() # Stop recording
-
-cam.close() # You should explicitly clean up
-
-print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
-```
-
-## Changing Camera Settings
-Here is a more complicated example, which manual changes a number of settings, and saves a number of images using PIL.
+## A useful example
 ```
 # manual_setup.py
 
