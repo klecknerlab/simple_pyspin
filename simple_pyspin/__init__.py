@@ -366,7 +366,7 @@ class Camera:
         lines.append('Commands')
         lines.append('-' * len(lines[-1]))
         lines.append('')
-        lines.append('**Note: the camera recording should be started/stopped using the `start` and `stop` methods, not any of the functions below (see easy_pyspin documentation).**')
+        lines.append('**Note: the camera recording should be started/stopped using the `start` and `stop` methods, not any of the functions below (see simple_pyspin documentation).**')
         lines.append('')
 
         for attr in sorted(self.camera_methods.keys()):

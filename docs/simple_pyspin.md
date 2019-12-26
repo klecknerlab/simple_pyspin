@@ -1,5 +1,5 @@
-Module easy_pyspin
-==================
+Module simple_pyspin
+====================
 
 Functions
 ---------

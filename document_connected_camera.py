@@ -1,4 +1,4 @@
-from easy_pyspin import Camera, list_cameras
+from simple_pyspin import Camera, list_cameras
 import os
 import time
 import gc

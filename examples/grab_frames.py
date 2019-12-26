@@ -1,4 +1,4 @@
-from easy_pyspin import Camera
+from simple_pyspin import Camera
 import time
 from PIL import Image
 import os

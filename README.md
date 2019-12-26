@@ -1,4 +1,4 @@
-# easy_pyspin
+# simple_pyspin
 A Pythonic class-based wrapper for the FLIR PySpin Library.
 
 # Why?
@@ -8,7 +8,7 @@ Why does this even exist, as the PySpin module already exists?  Because it's a p
 1. If you don't already have them, I would recommend installing Numpy and the Python Imaging Library.  The easiest way to do this is to install a scientific Python distribution like [Anaconda](https://www.anaconda.com/distribution/).
 2. [Install Spinnaker and PySpin from FLIR.](https://www.flir.com/products/spinnaker-sdk/)  
     - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/,))
-3. Install easy_pyspin module:
+3. Install simple_pyspin module:
     1. Download source from GitHub
     2. Run `python setup.py install` or `python setup.py develop` from the directory of the downloaded files.
 
@@ -16,10 +16,10 @@ Why does this even exist, as the PySpin module already exists?  Because it's a p
 See the examples directory of the source for these examples and more.
 
 ## Basic Usage
-```
+```python
 # dead_simple.py
 
-from easy_pyspin import Camera
+from simple_pyspin import Camera
 
 with Camera() as cam: # Acquire and initialize Camera
     cam.start() # Start recording
@@ -31,8 +31,8 @@ print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
 Note that as long as you open the camera using a `with` clause, you don't need to worry about initialization or cleanup of the camera -- the module handles this for you!
 
 Equivalently, you can do this manually; the following code is equivalent to the above:
-```
-from easy_pyspin import Camera
+```python
+from simple_pyspin import Camera
 
 cam = Camera() # Acquire Camera
 cam.init() # Initialize camera
@@ -48,10 +48,10 @@ print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
 
 ## Changing Camera Settings
 Here is a more complicated example, which manual changes a number of settings, and saves a number of images using PIL.
-```
+```python
 # manual_setup.py
 
-from easy_pyspin import Camera
+from simple_pyspin import Camera
 from PIL import Image
 import os
 

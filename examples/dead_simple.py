@@ -1,4 +1,4 @@
-from easy_pyspin import Camera
+from simple_pyspin import Camera
 
 with Camera() as cam: # Initialize Camera
     cam.start() # Start recording

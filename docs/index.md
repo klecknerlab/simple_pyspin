@@ -1,10 +1,10 @@
 
-This page contains the documentation for the `easy_pyspin` Python library.
+This page contains the documentation for the `simple_pyspin` Python library.
 It is probably easiest to learn by example ([see below](An-instructive-example)), and by consulting the attributes for your specific camera.
 
-  - [Automatically generated documentation of the python module can be found here.](easy_pyspin.md)
-  - [Github Repository](https://github.com/klecknerlab/easy_pyspin)
- 
+  - [Automatically generated documentation of the python module can be found here.](simple_pyspin.md)
+  - [Github Repository](https://github.com/klecknerlab/simple_pyspin)
+
 ## Documented cameras
 
   - [Point Grey Research Chameleon3 CM3-U3-13Y3M](cameras/Point_Grey_Research_Chameleon3_CM3-U3-13Y3M.md)
@@ -16,7 +16,7 @@ It is probably easiest to learn by example ([see below](An-instructive-example))
 ```
 # manual_setup.py
 
-from easy_pyspin import Camera
+from simple_pyspin import Camera
 from PIL import Image
 import os
 
