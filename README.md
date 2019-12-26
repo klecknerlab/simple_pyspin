@@ -1,6 +1,8 @@
 # simple_pyspin
 A Pythonic class-based wrapper for the FLIR PySpin Library.
 
+More documentation can be found on [Github Pages](https://klecknerlab.github.io/simple_pyspin/), and the source can be found on [Github](https://github.com/klecknerlab/simple_pyspin).
+
 # Why?
 Why does this even exist, as the PySpin module already exists?  Because it's a pain to use, and difficult to wrap your head around basic operations.  For example, on some camera manually setting frame rate requires accessing methods by finding nodes, which is quite complicated.  This library makes it incredibly simple, and can also auto-document all the features of your *specific* cameras for easy reference.  
 
@@ -9,8 +11,8 @@ Why does this even exist, as the PySpin module already exists?  Because it's a p
 2. [Install Spinnaker and PySpin from FLIR.](https://www.flir.com/products/spinnaker-sdk/)  
     - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/,))
 3. Install simple_pyspin module:
-    1. Download source from GitHub
-    2. Run `python setup.py install` or `python setup.py develop` from the directory of the downloaded files.
+    - Install from PyPi: `pip install simple-pyspin`.
+    - Download source from GitHub and use `setup.py`.
 
 # Usage
 See the examples directory of the source for these examples and more.
@@ -30,7 +32,7 @@ print(imgs[0].shape, imgs[0].dtype) # Each image is a numpy array!
 ```
 Note that as long as you open the camera using a `with` clause, you don't need to worry about initialization or cleanup of the camera -- the module handles this for you!
 
-Equivalently, you can do this manually; the following code is equivalent to the above:
+Equivalently, you can do this manually; the following code is functionally identical to the above:
 ```python
 from simple_pyspin import Camera
 
