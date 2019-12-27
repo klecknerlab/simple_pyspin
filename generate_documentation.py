@@ -28,7 +28,7 @@ It is probably easiest to learn by example ([see below](An-instructive-example))
 *If you have cameras you would like to add to this list, run `document_connect_camera.py` from the source code and send the resulting output in `docs/cameras` to `dkleckner@ucmerced.edu`.*
 
 ## An instructive example
-```
+```python
 # manual_setup.py
 
 from simple_pyspin import Camera

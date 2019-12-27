@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='simple_pyspin',
-    version='0.1.0',
+    version='0.1.1',
     description='An easy-to-use Pythonic wrapper for the FLIR PySpin Library.  Developed by the Kleckner Lab at UC Merced.',
     url='https://github.com/klecknerlab/simple_pyspin',
     long_description=long_description,
