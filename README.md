@@ -3,6 +3,8 @@ A Pythonic class-based wrapper for the FLIR PySpin Library.
 
 More documentation can be found on [Github Pages](https://klecknerlab.github.io/simple_pyspin/), and the source can be found on [Github](https://github.com/klecknerlab/simple_pyspin).
 
+**Note: Please do not contact me with support issues.  I do not have time to troubleshoot installation issues -- if there are bugs feel free to post an issue on Github, but it is unlikely I will resolve it.**
+
 # Why?
 Why does this even exist, as the PySpin module already exists?  Because it's a pain to use, and difficult to wrap your head around basic operations.  For example, on some camera manually setting frame rate requires accessing methods by finding nodes, which is quite complicated.  This library makes it incredibly simple, and can also auto-document all the features of your *specific* cameras for easy reference.  
 

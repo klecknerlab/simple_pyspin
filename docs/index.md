@@ -10,8 +10,6 @@ It is probably easiest to learn by example ([see below](An-instructive-example))
   - [Point Grey Research Chameleon3 CM3-U3-13Y3M](cameras/Point_Grey_Research_Chameleon3_CM3-U3-13Y3M.md)
   - [Point Grey Research Chameleon3 CM3-U3-31S4C](cameras/Point_Grey_Research_Chameleon3_CM3-U3-31S4C.md)
 
-*If you have cameras you would like to add to this list, run `document_connect_camera.py` from the source code and send the resulting output in `docs/cameras` to `dkleckner@ucmerced.edu`.*
-
 ## An instructive example
 ```python
 # manual_setup.py
