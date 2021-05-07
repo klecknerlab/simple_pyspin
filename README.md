@@ -11,7 +11,7 @@ Why does this even exist, as the PySpin module already exists?  Because it's a p
 # Installation
 1. If you don't already have them, I would recommend installing Numpy and the Python Imaging Library.  The easiest way to do this is to install a scientific Python distribution like [Anaconda](https://www.anaconda.com/distribution/).
 2. [Install Spinnaker and PySpin from FLIR.](https://www.flir.com/products/spinnaker-sdk/)  
-    - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/,))
+    - You will likely need to follow several manual steps after the Spinnaker installation to get PySpin ([Mac Instructions](https://www.flir.com/support-center/iis/machine-vision/application-note/getting-started-with-spinnaker-sdk-on-macos/))
 3. Install simple_pyspin module:
     - Install from PyPi: `pip install simple-pyspin`.
     - Download source from GitHub and use `setup.py`.
